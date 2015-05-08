@@ -3,7 +3,8 @@ class CreateRestaurants < ActiveRecord::Migration
     create_table :restaurants do |t|
       t.string :name
       t.integer :rating
-      t.date :last_visited
+      t.datetime :last_visited
+      t.references :user
       t.timestamps null: false
     end
   end
