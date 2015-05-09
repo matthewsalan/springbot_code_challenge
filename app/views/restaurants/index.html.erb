@@ -1,0 +1,12 @@
+<h1>All Restaurants:</h1>
+<% @restaurants.each do |x| %>
+<div class="restuarants_index">
+<br />
+  <ul>
+    <li><p> <%= x.name %></p></li>
+    <li><p> Rating: <%= x.rating %></p></li>
+    <li><p> Last Visited <%= x.last_visited.localtime.strftime("%m-%d-%Y") %></p></li>
+  </ul>
+<% end %>
+</div>
+<%= link_to "Add New Restaurant", new_restaurant_path %>

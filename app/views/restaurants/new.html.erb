@@ -1,0 +1,27 @@
+<h2>Add Restaurant:</h2>
+<%= form_for @restaurant do |f| %>
+<% if @restaurant.errors.any? %>    
+      <h2><%= pluralize(@restaurant.errors.count, "error") %> prohibited this restaurant from being saved:</h2>
+      <ul>
+      <% @restaurant.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+  <% end %>
+      <%= f.label :name %>:
+      <%= f.text_field :name %><br />
+      <br />
+
+      <%= f.label :rating %>:
+      <%= f.text_field :rating %><br />
+      <br />
+
+      <%= f.label :last_visited %>:
+      <%= date_select :restaurant, :last_visited %><br />
+      <br />
+      
+    <%= f.submit %>
+    <br />
+<% end %>
+<br />
+<%= link_to "Back To Restaurant Index", restaurants_path %>
