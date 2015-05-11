@@ -11,11 +11,11 @@
       <%= f.label :name %>:
       <%= f.text_field :name %><br />
       <br />
-
+      
       <%= f.label :rating %>:
-      <%= f.text_field :rating %><br />
-      <br />
-
+      <%= f.text_field :rating %>
+      <p>(Please rate the restaurant on a scale from 1 to 5, 1 being the worst and 5 being the best)</p>
+      
       <%= f.label :last_visited %>:
       <%= date_select :restaurant, :last_visited %><br />
       <br />
@@ -24,4 +24,8 @@
     <br />
 <% end %>
 <br />
-<%= link_to "Back To Restaurant Index", restaurants_path %>
+<%= link_to "Back To Restaurant Index", restaurants_path %> | 
+<% if user_signed_in? %>
+  <%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
+<% end %>
+
