@@ -4,7 +4,7 @@ class CreateRestaurants < ActiveRecord::Migration
       t.string :name
       t.integer :rating
       t.datetime :last_visited
-      t.references :user
+      t.references :user, index: true
       t.timestamps null: false
     end
   end

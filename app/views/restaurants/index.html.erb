@@ -1,4 +1,13 @@
 <h1>All Restaurants:</h1>
+
+<%= link_to "Add New Restaurant", new_restaurant_path %> |
+<% if user_signed_in? %>
+  <%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
+  <% else %>
+  <%= link_to "Sign In", new_user_session_path, :method => :get %> |
+  <%= link_to "Sign Up", new_user_registration_path, :method => :get %>
+<% end %>
+
 <% @restaurants.each do |x| %>
 <div class="restuarants_index">
   <ul>
@@ -9,10 +18,3 @@
 <% end %>
 </div>
 
-<%= link_to "Add New Restaurant", new_restaurant_path %> |
-<% if user_signed_in? %>
-  <%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
-  <% else %>
-  <%= link_to "Sign In", new_user_session_path, :method => :get %> |
-  <%= link_to "Sign Up", new_user_registration_path, :method => :get %>
-<% end %>

@@ -1,16 +1,16 @@
 class RestaurantsController < ApplicationController
-  before_action :authenticate_user!, only: [:new] 
+  before_action :authenticate_user!, only: [:new, :create] 
 
   def index
     @restaurants = Restaurant.all
   end
 
   def new
-    @restaurant = Restaurant.new
+    @restaurant = current_user.restaurants.build
   end
 
   def create
-    @restaurant = Restaurant.new(restaurant_params)
+    @restaurant = current_user.restaurants.build(restaurant_params)
     respond_to do |format|
       if @restaurant.save
         format.html { redirect_to restaurants_path, notice: 'Restaurant was successfully created.' }
