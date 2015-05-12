@@ -1,5 +1,6 @@
 class Restaurant < ActiveRecord::Base
-  has_many :users
+  has_many :ratings
+  has_many :users, through: :ratings
   validates :name, presence: true
   validates :rating, numericality: { only_integer: true }
   validates :rating, presence: { message: "Rating must bbe between 1 - 5" }
