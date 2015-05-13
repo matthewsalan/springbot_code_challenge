@@ -32,7 +32,6 @@ class DeviseCreateUsers < ActiveRecord::Migration
 
 
       t.timestamps
-      t.references :restaurant
     end
 
     add_index :users, :email,                unique: true
