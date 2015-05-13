@@ -8,12 +8,10 @@
   <%= link_to "Sign Up", new_user_registration_path, :method => :get %>
 <% end %>
 
-<% @restaurants.each do |x| %>
+<% @restaurants.each do |restaurant| %>
 <div class="restuarants_index">
   <ul>
-    <li><%= x.name %></li>
-    <li>Rating: <%= x.rating %></li>
-    <li>Last Visited: <%= x.last_visited.localtime.strftime("%m-%d-%Y") %></li>
+    <li><%= link_to restaurant.name, restaurant %></li>
   </ul>
 <% end %>
 </div>

@@ -1,0 +1,13 @@
+<h1><%= @restaurant.name %></h1>
+<h3>Users who have rated <%= @restaurant.name %> </h3>
+
+<%= link_to "Add Your Rating", new_restaurant_rating_path(restaurant_id: @restaurant.id) %> |
+<%= link_to "Back To Restaurant Index", restaurants_path %> 
+<br />
+<br />
+<% if user_signed_in? %>
+  <%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
+  <% else %>
+  <%= link_to "Sign In", new_user_session_path, :method => :get %> |
+  <%= link_to "Sign Up", new_user_registration_path, :method => :get %>
+<% end %>

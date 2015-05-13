@@ -1,0 +1,32 @@
+<h2>Rate Restaurant:</h2>
+
+<%= form_for [@restaurant, @rating] do |f| %>
+<% if @rating.errors.any? %>    
+      <h2><%= pluralize(@rating.errors.count, "error") %> prohibited this restaurant from being saved:</h2>
+      <ul>
+      <% @rating.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+  <% end %>
+  
+  <%= f.label :rating %>
+  <%= f.text_field :rating %><br />
+  <br />
+
+  <%= f.label :last_visited %>
+  <%= date_select :rating, :last_visited %><br />
+  <br />
+
+  <%= f.submit %>
+
+<% end %>
+<br />
+
+
+<%= link_to "Back To Restaurant Index", restaurants_path %> | 
+<% if user_signed_in? %>
+  <%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
+<% end %>
+
+
