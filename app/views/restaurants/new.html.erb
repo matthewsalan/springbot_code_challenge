@@ -13,8 +13,12 @@
       <%= f.text_field :name %><br />
       <br />
       
-      <%= f.submit %>
+      <%= f.submit("Add Restaurant", class: "btn btn-success btn-sm" ) %>
+      
     <br />
 <% end %>
 <br />
+<div class="btn btn-primary btn-sm">
+  <%= link_to "Back To Restaurant Index", restaurants_path %> 
+</div>
 

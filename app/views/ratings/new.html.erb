@@ -1,4 +1,4 @@
-<h2>Rate Restaurant:</h2>
+<h1>Rate: <%= @restaurant.name %></h1>
 
 <%= form_for [@restaurant, @rating] do |f| %>
 <% if @rating.errors.any? %>    

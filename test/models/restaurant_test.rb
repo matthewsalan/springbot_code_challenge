@@ -1,7 +1,11 @@
 require 'test_helper'
 
 class RestaurantTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  def new
+    @restaurant = Restaurant.new(name: "Burger King")
+  end
+
+  test "should be valid" do
+    assert @restaurant.valid?
+  end
 end

@@ -1,6 +1,14 @@
 class RatingsController < ApplicationController
   before_action :authenticate_user!, only: [:create, :new]
 
+  def index
+    begin
+      @overall_rating = 2
+      @restaurant = Restaurant.count
+      @rating = Restaurant.offset(rand(@restaurant)).first
+    end until @rating.ratings.average(:rating).to_i > @overall_rating
+  end
+
   def new
     @restaurant = Restaurant.find(params[:restaurant_id])
     @rating = current_user.ratings.build

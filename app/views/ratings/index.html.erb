@@ -1,12 +1,18 @@
-<h1><%= @restaurant.name %></h1>
-<br />
+<div class="h1">
+  <h1>Today's Lunch Is At:</h1>
+</div>
+<div class="h3">
+<h3><%= @rating.name %></h3>
+</div>
+
+<p>Don't like this restaurant?</p>
 <div class="btn btn-success btn-sm">
-  <%= link_to "Add Your Rating", new_restaurant_rating_path(restaurant_id: @restaurant.id) %> 
+  <%= link_to "New Restaurant", selected_restaurant_index_path %> 
 </div>
 <br />
 <br />
 <div class="btn btn-primary btn-sm">
-  <%= link_to "Back To Restaurant Index", restaurants_path %>
+  <%= link_to "View All Restaurants", restaurants_path %> 
 </div>
 <br />
 <br />

@@ -20,8 +20,17 @@
 
 
 body { 
-  padding-top: 30px;
+  padding-top: 20px;
+  margin-left: 40px;
   font-family: 'Lato', sans-serif; 
   color: #ffffff;
   max-width: 100%;
+}
+
+.table {
+  max-width: 25%;
+}
+
+.btn {
+  border-radius: 5px;
 }
