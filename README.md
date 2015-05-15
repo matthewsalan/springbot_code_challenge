@@ -2,7 +2,7 @@
 
 ####Code challenge web app for Springbot
 
-```
+
 What's For Lunch at Springbot?
 We at Springbot don't know where to eat lunch. Please build us a Ruby on Rails app that will help us!
 
@@ -23,4 +23,4 @@ PLEASE do not spend a lot of time with user authentication. All we care about is
 Evaluation:
 
 We will be checking your app for functionality, code readability, and presence of (but not necessarily quality of) tests.
-```
+
