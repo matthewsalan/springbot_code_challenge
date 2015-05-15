@@ -1,6 +1,6 @@
 ##Link to app on Heroku - https://mighty-lake-7406.herokuapp.com/
 
-####Code challenge web app for Springbot
+####Code challenge web app for Springbot Rails developer position.
 
 
 What's For Lunch at Springbot?
