@@ -46,6 +46,9 @@ group :development, :test do
   gem 'spring'
   gem 'pry-rails'
   gem 'better_errors'
+end
 
+group :production do
+  gem 'rails_12factor'
 end
 
