@@ -1,8 +1,8 @@
-##Link to app on Heroku - https://mighty-lake-7406.herokuapp.com/
+Link to app on Heroku - https://mighty-lake-7406.herokuapp.com/
 
-####Code challenge web app for Springbot
+Code challenge web app for Springbot
 
-`What's For Lunch at Springbot?`
+What's For Lunch at Springbot?
 We at Springbot don't know where to eat lunch. Please build us a Ruby on Rails app that will help us!
 
 Requirements
