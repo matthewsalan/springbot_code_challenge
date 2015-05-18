@@ -46,6 +46,8 @@ group :development, :test do
   gem 'spring'
   gem 'pry-rails'
   gem 'better_errors'
+  gem 'minitest-spec-rails'
+  gem 'minitest-rails-capybara'
 end
 
 group :production do
