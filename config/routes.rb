@@ -4,5 +4,4 @@ Rails.application.routes.draw do
   resources :restaurants, only: [:index, :new, :create, :show] do
     resources :ratings, only: [:create, :new]
   end
-  resources :ratings, only: [:index], as: 'selected_restaurant'
 end
