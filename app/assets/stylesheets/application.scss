@@ -28,9 +28,24 @@ body {
 }
 
 .table {
-  max-width: 25%;
+  max-width: 45%;
+  text-align: center;
+  th {
+    text-align: center;
+  } 
 }
 
 .btn {
   border-radius: 5px;
 }
+
+.sign-in {
+  display: inline-block;
+  padding-left: 277px;
+}
+
+.p-index {
+  text-align: center;
+  max-width: 45%;
+}
+
